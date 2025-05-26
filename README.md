@@ -1,1 +1,1 @@
-# micros
+1. create a virtual env: 'python3 -m venv mic'
