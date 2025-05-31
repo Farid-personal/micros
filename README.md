@@ -4,8 +4,6 @@ Install windows terminal
 - test ubuntu (window poweshel):
 wsl -l -v
 
-![alt text](image.png)
-
 
 This will install ubuntu (wsl -l -v fails):
 powershell (run as admin): wsl --install (maybe restart)
