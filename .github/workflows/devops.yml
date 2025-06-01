@@ -1,0 +1,30 @@
+name: Python application test with Github Actions
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04.5
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.11.12
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.11.12"
+        
+    - name: Install dependencies
+      run: |
+        make install
+        
+    - name: Lint with flake8
+      run: |
+        # make lint
+        
+    - name: Test with pytest
+      run: |
+        # make test
+        
+    - name: format code
+      run: |
+        # make format
