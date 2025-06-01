@@ -68,7 +68,7 @@ Install windows terminal
 - empty file list:
     requirements.txt: install commands for packages used in this code
     Dockerfile
-    Makefile: has the steps of the project life cycle
+    Makefile: has the steps of the project life cycle. a tool to keep the project organized.
     main.py: runs the 
     mylib/__main__.py: helps python import the library
 
@@ -87,3 +87,50 @@ Install windows terminal
     
     microservice built-out file:
         touch main.py (this imports the library code)
+
+- add sections to make file:
+    install:
+        # install commands
+    format:
+        # format code
+    lint:
+        # flake8 or pythlint
+    test: 
+        # test
+    deploy:
+        #deploy
+
+    all: install lint test deploy
+
+- try 'make' command (vs termimal or ubuntu):
+    (mic) fazad@DESKTOP-DOIBIBS:/mnt/c/Development/micros$ make install 
+    (mic) fazad@DESKTOP-DOIBIBS:/mnt/c/Development/micros$ make all 
+
+- add packages to requirements.txt 
+    wikipedia
+    pytest
+    pytest-cov
+    pylint
+    black # formatting tool
+    fire
+
+- add commands to makefile to install them in the venv
+    pip install --upgrade pip &&\
+    pip install -r requirements.txt
+
+- run 'make install' to install all packages in requirements.txt 
+
+- add version numbers of the install packages to the requirements.txt 
+    this is necessary to make sure all installs in the future will be same as now.
+
+    run 'pip freeze' or find the packages in python extention (export environmet on the venv)
+
+    replace all in requirements.txt with this:
+        wikipedia==1.4.0
+        pytest==8.3.5
+        pytest-cov==6.1.1
+        pylint==3.3.7
+        black==25.1.0  # formatting tool
+        fire==0.7.0
+
+
